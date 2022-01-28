@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Theme */
+* {
+    font-family: 'Rubik', sans-serif;
+}
+
+.bg-main {
+    background-color: #1C437A;
+}
+
+.bg-blue {
+    background-color: #3E6BAC;
+}
+
+.bg-red {
+    background-color: #D54B41;
+}
+
+.bg-green {
+    background-color: #63a583;
+}
+
+.red {
+    color: #D54B41;
+}
+
+.blue {
+    color: #3E6BAC;
+}
+
+/* Theme */
+
+/* Layout */
+header .navbar {
+    background-color: #1C437A;
+}
+
+header .navbar .material-icons {
+    font-size: 45px;
+}
+
+.btn-outline-danger {
+    color: #ff434b;
+    border-color: #ff434b;
+}
+
+/* Layout */
+
+/* Login and Register Page */
+
+#login,
+#register,
+#home,
+#add_new,
+#edit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 190px);
+}
+
+#login .voting,
+#register .voting {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: linear-gradient(to right, #3E6BAC, #1C437A);
+    color: #fff;
+}
+
+#login .voting .material-icons,
+#register .voting .material-icons {
+    font-size: 100px;
+    margin-bottom: 30px;
+}
+
+#login form .btn,
+#register form .btn {
+    background-color: #1C437A;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+/* Login and Register Page */
+
+/* Home Page */
+#home .btn {
+    background-color: #3E6BAC;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-top: 20px;
+    min-width: 200px;
+}
+
+
+#home .btn:hover {
+    opacity: 0.9;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+/* Home Page */
+
+/* Vote Page */
+
+#vote .image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+#vote .person:hover {
+    box-shadow: none !important;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+#vote .person .vote .btn {
+    border-color: #63a583;
+    color: #63a583;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+#vote .person .vote .btn:hover,
+#vote .person .vote .btn:focus,
+#vote .person .vote .btn:active,
+.active-check {
+    color: #fff !important;
+    background-color: #63a583 !important;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    outline: none;
+}
+
+#vote form #store_btn {
+    background-color: #3E6BAC;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    min-height: 60px;
+}
+
+
+/* users page */
+#users .image img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+/* users page */

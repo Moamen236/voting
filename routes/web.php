@@ -16,8 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/redirect', [RedirectController::class, 'index']);
-
 Route::view('/', 'web.home.index')->name('home');
 
 Route::middleware(['auth', 'user'])->group(function () {

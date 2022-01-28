@@ -7,23 +7,26 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ asset('css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    @yield('style')
 </head>
 <body class="bg-light">
 
-    
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
-                <a class="navbar-brand" href="{{ route('home') }}">Voting</a>
+                <a class="navbar-brand" href="{{ route('home') }}"><span class="material-icons"> how_to_vote </span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    {{-- @auth   
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             @if(auth()->user()->role->name === 'user')
                                 <li class="nav-item">
-                                    <a class="nav-link {{ url()->current() == route('vote.index') ? 'active' : '' }}" aria-current="page" href="{{ route('vote.index') }}">Vote</a>
+                                    <a class="nav-link {{ url()->current() == route('vote.index') ? 'active' : '' }}" aria-current="page" href="{{ route('vote.index') }}">go to Vote</a>
                                 </li>
                             @endif
                             @if(auth()->user()->role->name === 'admin')
@@ -35,13 +38,14 @@
                                 </li>
                             @endif
                         </ul>
+                    @endauth --}}
                     <div class="auth ms-auto">
                         @guest
                             <a href="{{ route('login') }}" class="btn btn-outline-light">Login</a>
                             <a href="{{ route('register') }}" class="btn btn-outline-light">Register</a>   
                         @endguest
                         @auth  
-                            <form action="post" action="{{ route('logout') }}">
+                            <form method="POST" action="{{ route('logout') }}">
                                 @csrf
                                 <button type="submit" class="btn btn-outline-danger">Logout</button>
                             </form>
@@ -61,6 +65,7 @@
     </div>
     
     <script src="{{ asset('js/all.min.js') }}"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     {{-- <script src="{{ asset('js/popper.js') }}"></script> --}}
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script> 
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
