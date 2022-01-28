@@ -85,8 +85,7 @@
                     }
                 }
             });
-
-            console.log(checked);
+            
             if(is_vote.value == 1){
                 Swal.fire({
                     icon: 'error',
