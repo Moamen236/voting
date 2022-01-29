@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\admin\UserController;
-use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\web\VoteController;
 use Illuminate\Support\Facades\Route;
 

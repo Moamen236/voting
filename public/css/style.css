@@ -52,7 +52,6 @@ header .navbar .material-icons {
 #login,
 #register,
 #home,
-#add_new,
 #edit {
     display: flex;
     justify-content: center;
